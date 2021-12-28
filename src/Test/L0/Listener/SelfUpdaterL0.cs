@@ -13,6 +13,8 @@ using GitHub.Runner.Sdk;
 using Moq;
 using Xunit;
 
+#if !(OS_OSX && ARM64)
+
 namespace GitHub.Runner.Common.Tests.Listener
 {
     public sealed class SelfUpdaterL0
@@ -784,3 +786,5 @@ namespace GitHub.Runner.Common.Tests.Listener
         }
     }
 }
+
+#endif
